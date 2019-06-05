@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Harry Potter the game</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	</head>
+	<body>
+		<div class="container s">	
+			<img src="door.png" alt="" class="w-25 d">
+			<img src="door2.png" alt="" class="w-25">
+			<img src="door3.png" alt="" class="w-25">
+		</div>
+		<div class="bg" style="background-size: 100% 100%; background-image: url(bg.jpg); height: 800px; display: none;" class="row">
+			<h1 style="color: white">help harry potter find some magic stuff</h1>
+			<h1 class="point" style="color: white">0</h1>
+			<button class="btn btn-primary hp ">exit</button>
+			<img src="mantiya.png" alt="" class="mantiya" style="width: 100px; position: absolute; margin-left: 200px; margin-top: 450px">
+			<img src="metla.png" alt="" class="metla"style="width: 100px; position: absolute; margin-left: 400px margin-top: 450px;">
+			<img src="palochka.png" alt="" class="palochka"style="width: 100px; position: absolute; margin-left: 600px; margin-top: 45px;">
+			<img src="gun.png" alt="" class="gun"style="width: 100px; position: absolute; margin-left: 800px; margin-top: 200px;">
+			<img src="ring.png" alt="" class="ring"style="width: 100px; position: absolute; margin-left: 1000px margin-top: 300px;">
+		</div>
+		<script type="text/javascript">
+			let score = 0;
+			document.querySelector(".d").onclick = function(){
+				alert("	ur in hogw rn!");
+				document.querySelector(".s").style.display = "none";
+				document.querySelector(".bg").style.display = "block";
+				document.querySelector(".mantiya").style.display = "block";
+				document.querySelector(".metla").style.display = "block";
+				document.querySelector(".palochka").style.display = "block";
+			}
+			document.querySelector(".mantiya").onclick = function(){
+				document.querySelector(".mantiya").style.display = "none";
+				score = score + 1;
+				document.querySelector(".point").innerHTML = score;
+			}
+			document.querySelector(".metla").onclick = function(){
+				document.querySelector(".metla").style.display = "none";
+				score = score + 1;
+				document.querySelector(".point").innerHTML = score;
+			}
+			document.querySelector(".palochka").onclick = function(){
+				document.querySelector(".palochka").style.display = "none";
+				score = score + 1;
+				document.querySelector(".point").innerHTML = score;
+			}
+			document.querySelector(".gun").onclick = function(){
+				alert("wrong")
+				document.querySelector(".bg").style.display = "none"
+				document.querySelector(".s").style.display = "block"
+				score = 0;
+				document.querySelector(".point").innerHTML = score;
+			}
+			document.querySelector(".ring").onclick = function(){
+				alert("wrong")
+				document.querySelector(".bg").style.display = "none"
+				document.querySelector(".s").style.display = "block"
+				score = 0;
+				document.querySelector(".point").innerHTML = score; 
+			}
+		</script>
+	</body>
+</html>
